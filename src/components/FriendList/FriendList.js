@@ -1,5 +1,6 @@
 import { FriendListItem } from './FriendList_Item';
 import { FriendListUl } from './FriendList.Stiled';
+import PropTypes from 'prop-types';
 
 export default function FriendList({ friends }) {
   return (
@@ -15,3 +16,14 @@ export default function FriendList({ friends }) {
     </FriendListUl>
   );
 }
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      avatar: PropTypes.string.isRequired,
+    })
+  ),
+};
