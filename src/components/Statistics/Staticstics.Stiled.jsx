@@ -8,7 +8,7 @@ export const StatSection = styled.section`
   margin-top: 35px;
   width: 500px;
   /* border: 1px solid rgba(0, 0, 0, 0.5); */
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 5px 5px 5px 5px;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
   transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -49,9 +49,10 @@ export const StatItem = styled.li`
   align-items: center;
   width: 20%;
   padding: 15px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  /* border: 1px solid rgba(0, 0, 0, 0.5); */
   /* border-radius: 0px 0px 3px 3px; */
   &:nth-child(1) {
+    border-radius: 0px 0px 0px 5px;
     background-color: #6fc3f2;
   }
   &:nth-child(2) {
@@ -64,6 +65,7 @@ export const StatItem = styled.li`
     background-color: #57b5c2;
   }
   &:nth-child(5) {
+    border-radius: 0px 0px 5px 0px;
     background-color: #d69332;
   }
 `;
