@@ -1,4 +1,4 @@
-export default function TransactionHistory({ transactions }) {
+export default function TransactionHistory({ items }) {
   return (
     <table className="transaction-history">
       <thead>

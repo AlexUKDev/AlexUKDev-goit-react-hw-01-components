@@ -75,10 +75,12 @@ export const StatLabel = styled.span`
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.95);
 `;
 
 export const StatPercentage = styled.span`
   font-family: sans-serif;
   font-weight: 600;
   font-size: 23px;
+  color: rgba(255, 255, 255, 0.95);
 `;
