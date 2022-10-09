@@ -1,26 +1,25 @@
+import { Table, THead, THeader, TRow, TD } from './TransactionHistory.Stiled';
+
 export default function TransactionHistory({ items }) {
   return (
-    <table className="transaction-history">
-      <thead>
+    <Table className="transaction-history">
+      <THead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <THeader>Type</THeader>
+          <THeader>Amount</THeader>
+          <THeader>Currency</THeader>
         </tr>
-      </thead>
+      </THead>
 
       <tbody>
-        <tr>
-          <td>Invoice</td>
-          <td>125</td>
-          <td>USD</td>
-        </tr>
-        <tr>
-          <td>Withdrawal</td>
-          <td>85</td>
-          <td>USD</td>
-        </tr>
+        {items.map(item => (
+          <TRow key={item.id}>
+            <TD>{item.type}</TD>
+            <TD>{item.amount}</TD>
+            <TD>{item.currency}</TD>
+          </TRow>
+        ))}
       </tbody>
-    </table>
+    </Table>
   );
 }
