@@ -1,6 +1,8 @@
 import Profile from './Profile/Profile';
+import Statistics from './Statistics/Statistics';
+import user from '../DB/user.json';
+import data from '../DB/data.json';
 
-import user from '../user.json';
 const {
   username,
   tag,
@@ -15,6 +17,7 @@ export const App = () => {
       style={{
         height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
@@ -30,6 +33,7 @@ export const App = () => {
         views={views}
         likes={likes}
       />
+      <Statistics title="Upload stats" data={data} />
     </div>
   );
 };
