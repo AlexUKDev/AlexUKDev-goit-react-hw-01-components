@@ -4,7 +4,8 @@ import FriendList from './FriendList/FriendList';
 import user from '../DB/user.json';
 import data from '../DB/data.json';
 import friendsList from '../DB/friends.json';
-
+import TransactionHistory from './Transactions/TransactionHistory';
+import transactions from '../DB/transactions.json';
 const {
   username,
   tag,
@@ -38,6 +39,7 @@ export const App = () => {
       />
       <Statistics title="Upload stats" data={data} />
       <FriendList friends={friendsList} />
+      <TransactionHistory transactions={transactions} />
     </div>
   );
 };
