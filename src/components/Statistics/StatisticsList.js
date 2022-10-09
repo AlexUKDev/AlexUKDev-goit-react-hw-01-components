@@ -5,6 +5,7 @@ import {
   StatPercentage,
 } from './Staticstics.Stiled';
 import PropTypes from 'prop-types';
+
 export default function StatisticsList({ data }) {
   return (
     <StatList className="stat-list">
