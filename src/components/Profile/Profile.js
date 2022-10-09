@@ -1,8 +1,23 @@
-import PropTypes from "prop-types";
-import Stats from "./Stats";
-import { ProfileWrap, DescriptionWrap, AvatarImg,NameTitle,TagTitle,LocationTitle} from "./Profile.Stiled";
+import PropTypes from 'prop-types';
+import Stats from './Stats';
+import {
+  ProfileWrap,
+  DescriptionWrap,
+  AvatarImg,
+  NameTitle,
+  TagTitle,
+  LocationTitle,
+} from './Profile.Stiled';
 
-export default function Profile({username, tag, location, avatar,followers,views,likes}) {
+export default function Profile({
+  username,
+  tag,
+  location,
+  avatar,
+  followers,
+  views,
+  likes,
+}) {
   return (
     <ProfileWrap className="profile">
       <DescriptionWrap className="description">
@@ -10,20 +25,16 @@ export default function Profile({username, tag, location, avatar,followers,views
           src={avatar}
           alt="User avatar"
           className="avatar"
-          height='100'
+          height="100"
         />
         <NameTitle className="name">{username}</NameTitle>
         <TagTitle className="tag">@{tag}</TagTitle>
         <LocationTitle className="location">{location}</LocationTitle>
       </DescriptionWrap>
-      <Stats
-        followers={followers}
-        views={views}
-        likes={likes}
-      />
+      <Stats followers={followers} views={views} likes={likes} />
     </ProfileWrap>
-  )
-};
+  );
+}
 
 Profile.propTypes = {
   username: PropTypes.string.isRequired,

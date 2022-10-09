@@ -1,11 +1,17 @@
 import StatisticsList from './StatisticsList';
 import { StatSection, StatTitle } from './Staticstics.Stiled';
+import PropTypes from 'prop-types';
 
 export default function Statistics({ title, data }) {
   return (
     <StatSection className="statistics">
-      <StatTitle className="title">{title}</StatTitle>
+      {title && <StatTitle className="title">{title}</StatTitle>}
       <StatisticsList data={data} />
     </StatSection>
   );
 }
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.object.isRequired,
+};

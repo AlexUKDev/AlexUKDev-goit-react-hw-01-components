@@ -4,7 +4,7 @@ import {
   StatLabel,
   StatPercentage,
 } from './Staticstics.Stiled';
-
+import PropTypes from 'prop-types';
 export default function StatisticsList({ data }) {
   return (
     <StatList className="stat-list">
@@ -20,19 +20,12 @@ export default function StatisticsList({ data }) {
   );
 }
 
-// <StatItem className="item">
-//         <span className="label">{data.label}</span>
-//         <span className="percentage">{data.percentage}%</span>
-//       </StatItem>
-//       <StatItem className="item">
-//         <span className="label">{data.label}</span>
-//         <span className="percentage">{data.percentage}%</span>
-//       </StatItem>
-//       <StatItem className="item">
-//         <span className="label">{data.label}</span>
-//         <span className="percentage">{data.percentage}%</span>
-//       </StatItem>
-//       <StatItem className="item">
-//         <span className="label">{data.label}</span>
-//         <span className="percentage">{data.percentage}%</span>
-//       </StatItem>
+StatisticsList.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};
