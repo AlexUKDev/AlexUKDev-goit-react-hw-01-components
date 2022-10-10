@@ -39,8 +39,8 @@ export const StatusSpan = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: ${props => {
-    if (props.status) {
+  background-color: ${prop => {
+    if (prop.status) {
       return 'green';
     } else {
       return 'red';
