@@ -1,4 +1,4 @@
-import { Table, THead, THeader, TRow, TD } from './TransactionHistory.Stiled';
+import { Table, THead, THeader, TRow, TD } from './TransactionHistory.Styles';
 import PropTypes from 'prop-types';
 export default function TransactionHistory({ items }) {
   return (

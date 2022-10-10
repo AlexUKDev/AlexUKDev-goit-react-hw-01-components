@@ -34,21 +34,18 @@ export const FriendListItemLi = styled.li`
   }
 `;
 
-export const StatusSpanOnline = styled.span`
+export const StatusSpan = styled.span`
   display: block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: green;
-
-  margin: 0px 10px;
-`;
-export const StatusSpanOfline = styled.span`
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: red;
+  background-color: ${props => {
+    if (props.status) {
+      return 'green';
+    } else {
+      return 'red';
+    }
+  }};
 
   margin: 0px 10px;
 `;

@@ -1,5 +1,5 @@
 import StatisticsList from './StatisticsList';
-import { StatSection, StatTitle } from './Staticstics.Stiled';
+import { StatSection, StatTitle } from './Staticstics.Styles';
 import PropTypes from 'prop-types';
 
 export default function Statistics({ title, data }) {

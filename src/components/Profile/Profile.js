@@ -7,7 +7,7 @@ import {
   NameTitle,
   TagTitle,
   LocationTitle,
-} from './Profile.Stiled';
+} from './Profile.Styles';
 
 export default function Profile({
   username,

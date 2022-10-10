@@ -3,7 +3,7 @@ import {
   StatItem,
   StatLabel,
   StatPercentage,
-} from './Staticstics.Stiled';
+} from './Staticstics.Styles';
 import PropTypes from 'prop-types';
 
 export default function StatisticsList({ data }) {

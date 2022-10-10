@@ -1,5 +1,5 @@
-import { FriendListItem } from './FriendList_Item';
-import { FriendListUl } from './FriendList.Stiled';
+import { FriendListItem } from './FriendListItem';
+import { FriendListUl } from './FriendList.Styles';
 import PropTypes from 'prop-types';
 
 export default function FriendList({ friends }) {

@@ -1,20 +1,15 @@
 import {
   FriendListItemLi,
-  StatusSpanOnline,
-  StatusSpanOfline,
+  StatusSpan,
   AvatarImg,
   FriendListItemName,
-} from './FriendList.Stiled';
+} from './FriendList.Styles';
 import PropTypes from 'prop-types';
 
 export function FriendListItem({ avatar, name, isOnline }) {
   return (
     <FriendListItemLi className="item">
-      {isOnline ? (
-        <StatusSpanOnline></StatusSpanOnline>
-      ) : (
-        <StatusSpanOfline></StatusSpanOfline>
-      )}
+      <StatusSpan status={isOnline} />
       <AvatarImg className="avatar" src={avatar} alt={name} width="48" />
       <FriendListItemName className="name">{name}</FriendListItemName>
     </FriendListItemLi>
